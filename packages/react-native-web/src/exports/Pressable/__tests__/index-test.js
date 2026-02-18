@@ -66,6 +66,13 @@ describe('components/Pressable', () => {
     });
   });
 
+  describe('prop "title"', () => {
+    test('value is set', () => {
+      const { container } = render(<Pressable title="tooltip text" />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
+
   test('focus interaction', () => {
     let container;
     const onBlur = jest.fn();

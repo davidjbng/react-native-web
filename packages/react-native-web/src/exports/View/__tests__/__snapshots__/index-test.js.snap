@@ -176,3 +176,10 @@ exports[`components/View prop "testID" value is set 1`] = `
   data-testid="123"
 />
 `;
+
+exports[`components/View prop "title" value is set 1`] = `
+<div
+  class="css-view-g5y9jx"
+  title="tooltip text"
+/>
+`;

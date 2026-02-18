@@ -149,6 +149,7 @@ const createDOMProps = (elementType, props, options) => {
     style,
     tabIndex,
     testID,
+    title,
     // Rest
     ...domProps
   } = props;
@@ -908,6 +909,10 @@ const createDOMProps = (elementType, props, options) => {
   // Automated test IDs
   if (testID != null) {
     domProps['data-testid'] = testID;
+  }
+  // Title attribute for tooltips
+  if (title != null) {
+    domProps.title = title;
   }
 
   if (domProps.type == null && elementType === 'button') {

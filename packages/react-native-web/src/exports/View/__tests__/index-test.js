@@ -301,6 +301,13 @@ describe('components/View', () => {
     });
   });
 
+  describe('prop "title"', () => {
+    test('value is set', () => {
+      const { container } = render(<View title="tooltip text" />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
+
   describe('prop "testID"', () => {
     test('value is set', () => {
       const { container } = render(<View testID="123" />);
